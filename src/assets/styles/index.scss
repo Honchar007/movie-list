@@ -1,0 +1,84 @@
+// configurations
+@import './reset.scss';
+@import './variables.scss';
+@import './fonts.scss';
+@import './mixins.scss';
+@import './typography.scss';
+@import './icons.scss';
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  @include typo-body;
+  background-color: $secondary;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  padding-bottom: 100px;
+
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 16px 0;
+    background: $bg-color;
+    color: $secondary;
+
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .main-view {
+      display: flex;
+      font-size: 24px;
+      gap:12px;
+      text-align: center;
+
+      .icn-btn {
+        display: flex;
+        cursor: pointer;
+
+        img {
+          width: 24px;
+          height: 24px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0 60px;
+    gap: 16px;
+
+    @include for-sm {
+      flex-direction: column;
+    }
+  }
+}
+
+h1 {
+  @include typo-h1;
+}
+

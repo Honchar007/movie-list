@@ -1,0 +1,51 @@
+@import '../../assets/styles/mixins.scss';
+
+.favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 580px;
+  border-radius: 10px;
+  gap: 10px;
+
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+
+  @include for-md {
+    max-width: 100%;
+  }
+
+  &-title {
+    padding: 16px;
+  }
+
+  &-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12px;
+  }
+
+  .favorite-movie {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+
+    .counter {
+      min-width: 32px;
+    }
+
+    .name {
+      width: 100%;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+  }
+}
